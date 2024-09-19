@@ -17,7 +17,7 @@ public class App extends Application {
     public void start(Stage stage) throws IOException {
 
 
-        FXMLLoader fxmlLoader = new FXMLLoader(App.class.getResource("events.fxml"));
+        FXMLLoader fxmlLoader = new FXMLLoader(App.class.getResource("planing.fxml"));
         Scene scene = new Scene(fxmlLoader.load(), 1456, 816);
         stage.resizableProperty().setValue(Boolean.FALSE);
         stage.setTitle("Hello!");
