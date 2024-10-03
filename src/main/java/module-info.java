@@ -3,6 +3,6 @@ module com.example.capingk {
     requires javafx.fxml;
 
 
-    opens com.example.capingk to javafx.fxml;
-    exports com.example.capingk;
+    opens com.example.campingk to javafx.fxml;
+    exports com.example.campingk;
 }
