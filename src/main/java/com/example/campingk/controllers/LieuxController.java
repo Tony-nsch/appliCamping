@@ -1,5 +1,6 @@
-package com.example.campingk;
+package com.example.campingk.controllers;
 
+import com.example.campingk.App;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.control.Button;
@@ -28,5 +29,30 @@ public class LieuxController {
 
     public void allerPageAnimations(MouseEvent mouseEvent) throws IOException  {
         App.lancerPage(new FXMLLoader(App.class.getResource("animations.fxml")), btnAnimations);
+    }
+
+    public static class PlaningController {
+
+        @FXML
+        Button btnAnimateurs;
+
+        @FXML
+        Button btnLieux;
+
+        @FXML
+        Button btnAnimations;
+
+
+        public void allerPageAnimateurs(MouseEvent mouseEvent) throws IOException {
+            App.lancerPage(new FXMLLoader(App.class.getResource("animateurs.fxml")), btnAnimateurs);
+        }
+
+        public void allerPageLieux(MouseEvent mouseEvent) throws IOException  {
+            App.lancerPage(new FXMLLoader(App.class.getResource("lieux.fxml")), btnLieux);
+        }
+
+        public void allerPageAnimations(MouseEvent mouseEvent) throws IOException  {
+            App.lancerPage(new FXMLLoader(App.class.getResource("animations.fxml")), btnAnimations);
+        }
     }
 }

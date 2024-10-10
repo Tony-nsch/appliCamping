@@ -9,19 +9,23 @@ import javafx.stage.Stage;
 import javafx.stage.StageStyle;
 
 import java.io.IOException;
+import java.util.Objects;
 
 public class App extends Application {
 
 
     @Override
     public void start(Stage stage) throws IOException {
+
         FXMLLoader fxmlLoader = new FXMLLoader(App.class.getResource("login.fxml"));
         Parent root = fxmlLoader.load();
         Scene scene = new Scene(root, 1456, 816);
 
+
         stage.setTitle("CampingK");
         stage.resizableProperty().setValue(Boolean.FALSE);
         stage.initStyle(StageStyle.DECORATED); // Utilise le style de fenêtre par défaut
+
 
         stage.setScene(scene);
         stage.show();

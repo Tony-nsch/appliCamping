@@ -1,5 +1,6 @@
-package com.example.campingk;
+package com.example.campingk.controllers;
 
+import com.example.campingk.App;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.control.Button;
