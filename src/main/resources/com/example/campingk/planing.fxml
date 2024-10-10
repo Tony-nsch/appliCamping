@@ -4,26 +4,26 @@
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.text.*?>
 
-<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="816.0" prefWidth="1456.0" style="-fx-background-color: #1B2B40;" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.campingk.controllers.LieuxController.PlaningController">
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="816.0" prefWidth="1456.0" style="-fx-background-color: #1B2B40;" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.campingk.controllers.PlaningController">
    <children>
       <Pane prefHeight="50.0" prefWidth="1456.0" style="-fx-background-color: #7C8EA6;">
          <children>
-            <Button fx:id="btnPlaning" layoutX="-6.0" layoutY="2.0" mnemonicParsing="false" prefHeight="47.0" prefWidth="653.0" style="-fx-background-color: #F2ECD8;" text="Planing" textFill="#73523f">
+            <Button fx:id="boutonPlaning" layoutX="-6.0" layoutY="2.0" mnemonicParsing="false" prefHeight="47.0" prefWidth="653.0" style="-fx-background-color: #F2ECD8;" text="Planing" textFill="#73523f">
                <font>
                   <Font name="Sylfaen" size="25.0" />
                </font>
             </Button>
-            <Button fx:id="btnAnimateurs" layoutX="647.0" layoutY="2.0" mnemonicParsing="false" onMouseClicked="#allerPageAnimateurs" prefHeight="47.0" prefWidth="268.0" style="-fx-background-color: rgba(0, 0, 0, 0);" text="Animateurs" textFill="#fff7e2">
+            <Button fx:id="boutonAnimateurs" layoutX="647.0" layoutY="2.0" mnemonicParsing="false" onMouseClicked="#allerPageAnimateurs" prefHeight="47.0" prefWidth="268.0" style="-fx-background-color: rgba(0, 0, 0, 0);" text="Animateurs" textFill="#fff7e2">
                <font>
                   <Font name="Sylfaen" size="25.0" />
                </font>
             </Button>
-            <Button fx:id="btnLieux" layoutX="915.0" layoutY="2.0" mnemonicParsing="false" onMouseClicked="#allerPageLieux" prefHeight="47.0" prefWidth="268.0" style="-fx-background-color: rgba(0, 0, 0, 0);" text="Lieux" textFill="#fff7e2">
+            <Button fx:id="boutonLieux" layoutX="915.0" layoutY="2.0" mnemonicParsing="false" onMouseClicked="#allerPageLieux" prefHeight="47.0" prefWidth="268.0" style="-fx-background-color: rgba(0, 0, 0, 0);" text="Lieux" textFill="#fff7e2">
                <font>
                   <Font name="Sylfaen" size="25.0" />
                </font>
             </Button>
-            <Button fx:id="btnAnimations" layoutX="1183.0" layoutY="2.0" mnemonicParsing="false" onMouseClicked="#allerPageAnimations" prefHeight="47.0" prefWidth="279.0" style="-fx-background-color: rgba(0, 0, 0, 0);" text="Animations" textFill="#fff7e2">
+            <Button fx:id="boutonAnimations" layoutX="1183.0" layoutY="2.0" mnemonicParsing="false" onMouseClicked="#allerPageAnimations" prefHeight="47.0" prefWidth="279.0" style="-fx-background-color: rgba(0, 0, 0, 0);" text="Animations" textFill="#fff7e2">
                <font>
                   <Font name="Sylfaen" size="25.0" />
                </font>

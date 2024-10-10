@@ -8,16 +8,17 @@ import javafx.scene.input.MouseEvent;
 
 import java.io.IOException;
 
-public class AnimationController {
-
-    @FXML
-    Button boutonPlaning;
+public class PlaningController {
 
     @FXML
     Button boutonAnimateurs;
 
     @FXML
     Button boutonLieux;
+
+    @FXML
+    Button boutonAnimations;
+
 
     public void allerPageAnimateurs(MouseEvent mouseEvent) throws IOException {
         FXMLLoader fxmlLoader = new FXMLLoader(App.class.getResource("animateurs.fxml"));
@@ -28,8 +29,8 @@ public class AnimationController {
         App.lancerPage(new FXMLLoader(App.class.getResource("lieux.fxml")), boutonLieux);
     }
 
-    public void allerPagePlaning(MouseEvent mouseEvent) {
-        FXMLLoader fxmlLoader = new FXMLLoader(App.class.getResource("planing.fxml"));
-        App.lancerPage(fxmlLoader, boutonPlaning);
+    public void allerPageAnimations(MouseEvent mouseEvent) {
+        FXMLLoader fxmlLoader = new FXMLLoader(App.class.getResource("animations.fxml"));
+        App.lancerPage(fxmlLoader, boutonAnimations);
     }
 }

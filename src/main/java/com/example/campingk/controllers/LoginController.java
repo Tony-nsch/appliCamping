@@ -31,13 +31,11 @@ public class LoginController {
         } else {
             login.setText("");
             mdp.setText("");
-            login.getStyleClass().add("error-border");
-            mdp.getStyleClass().add("error-border");
         }
     }
 
     public void allerPageSignin(MouseEvent mouseEvent) {
         FXMLLoader page = new FXMLLoader(App.class.getResource("signin.fxml"));
-        App.lancerPage(page, connecter);
+        App.lancerPage(page, creerCompte);
     }
 }

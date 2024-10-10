@@ -30,29 +30,4 @@ public class LieuxController {
     public void allerPageAnimations(MouseEvent mouseEvent) throws IOException  {
         App.lancerPage(new FXMLLoader(App.class.getResource("animations.fxml")), btnAnimations);
     }
-
-    public static class PlaningController {
-
-        @FXML
-        Button btnAnimateurs;
-
-        @FXML
-        Button btnLieux;
-
-        @FXML
-        Button btnAnimations;
-
-
-        public void allerPageAnimateurs(MouseEvent mouseEvent) throws IOException {
-            App.lancerPage(new FXMLLoader(App.class.getResource("animateurs.fxml")), btnAnimateurs);
-        }
-
-        public void allerPageLieux(MouseEvent mouseEvent) throws IOException  {
-            App.lancerPage(new FXMLLoader(App.class.getResource("lieux.fxml")), btnLieux);
-        }
-
-        public void allerPageAnimations(MouseEvent mouseEvent) throws IOException  {
-            App.lancerPage(new FXMLLoader(App.class.getResource("animations.fxml")), btnAnimations);
-        }
-    }
 }

@@ -5,34 +5,14 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="027ab735-ffcd-4d22-bd6a-1df0840e0d37" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/campingk/controllers/SigninController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/com/example/campingk/signin.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/uiDesigner.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.mvn/wrapper/maven-wrapper.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.mvn/wrapper/maven-wrapper.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/campingk/AnimateursController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/campingk/controllers/AnimateursController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/campingk/AnimationController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/campingk/controllers/AnimationController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/campingk/App.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/campingk/App.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/campingk/LieuxController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/campingk/controllers/LieuxController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/campingk/LoginController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/campingk/controllers/LoginController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/campingk/PlaningController.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/module-info.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/module-info.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/campingk/animateurs.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/example/campingk/animateurs.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/campingk/animations.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/example/campingk/animations.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/campingk/lieux.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/example/campingk/lieux.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/campingk/login.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/example/campingk/login.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/campingk/planing.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/example/campingk/planing.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/styles/styles.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/styles/styles.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/module-info.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/module-info.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/styles/styles.css" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/styles/styles.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/campingk/controllers/PlaningController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <list id="f0e3ebe1-5a10-4147-9103-13d666b18af9" name="Changes by ncaglioti" comment="">
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/campingk/App.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/campingk/App.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/module-info.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/module-info.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/campingk/controllers/AnimationController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/campingk/controllers/AnimationController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/campingk/controllers/LieuxController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/campingk/controllers/LieuxController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/campingk/controllers/LoginController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/campingk/controllers/LoginController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/campingk/planing.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/example/campingk/planing.fxml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -48,22 +28,6 @@
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
-  </component>
-  <component name="LineStatusTrackerManager">
-    <file path="$PROJECT_DIR$/src/main/java/module-info.java">
-      <ranges>
-        <range start1="3" end1="3" start2="3" end2="4" changelist="f0e3ebe1-5a10-4147-9103-13d666b18af9" />
-        <range start1="7" end1="7" start2="8" end2="10" changelist="027ab735-ffcd-4d22-bd6a-1df0840e0d37" />
-      </ranges>
-    </file>
-    <file path="$PROJECT_DIR$/src/main/java/com/example/campingk/App.java">
-      <ranges>
-        <range start1="11" end1="11" start2="11" end2="12" changelist="027ab735-ffcd-4d22-bd6a-1df0840e0d37" />
-        <range start1="17" end1="17" start2="18" end2="19" changelist="f0e3ebe1-5a10-4147-9103-13d666b18af9" />
-        <range start1="21" end1="21" start2="23" end2="24" changelist="027ab735-ffcd-4d22-bd6a-1df0840e0d37" />
-        <range start1="25" end1="25" start2="28" end2="29" changelist="027ab735-ffcd-4d22-bd6a-1df0840e0d37" />
-      </ranges>
-    </file>
   </component>
   <component name="ProjectColorInfo"><![CDATA[{
   "associatedIndex": 8
@@ -113,11 +77,22 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1728559438840</updated>
-      <workItem from="1728559439844" duration="5331000" />
+      <workItem from="1728559439844" duration="7533000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
   </component>
 </project>
