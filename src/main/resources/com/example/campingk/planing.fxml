@@ -31,15 +31,12 @@
          </children>
       </Pane>
       <ListView fx:id="listView" layoutX="14.0" layoutY="66.0" prefHeight="701.0" prefWidth="813.0" style="-fx-background-color: white;" />
-      <Button fx:id="boutonSemainePrecedente" layoutX="14.0" layoutY="777.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="209.0" style="-fx-background-color: #fff7e2;" text="Semaine précédente" textFill="#73523f" />
-      <Button fx:id="boutonSemaineSuivante" layoutX="618.0" layoutY="777.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="209.0" style="-fx-background-color: #fff7e2;" text="Semaine suivante" textFill="#73523f" />
-      <TextField fx:id="textFieldSemaine" layoutX="232.0" layoutY="777.0" prefHeight="25.0" prefWidth="377.0" style="-fx-background-color: #fff7e2;" />
       <Label layoutX="877.0" layoutY="92.0" prefHeight="25.0" prefWidth="99.0" text="Animation" textFill="#fff7e2">
          <font>
             <Font name="Sylfaen" size="16.0" />
          </font>
       </Label>
-      <Label layoutX="876.0" layoutY="156.0" prefHeight="25.0" prefWidth="156.0" text="Animateur à ajouter" textFill="#fff7e2">
+      <Label layoutX="876.0" layoutY="156.0" prefHeight="25.0" prefWidth="156.0" text="Animateur" textFill="#fff7e2">
          <font>
             <Font name="Sylfaen" size="16.0" />
          </font>
@@ -61,28 +58,24 @@
          </font>
       </Label>
       <TextField fx:id="textFieldHeure" layoutX="876.0" layoutY="408.0" prefHeight="25.0" prefWidth="243.0" style="-fx-background-color: white;" />
-      <Button fx:id="supprimer" layoutX="878.0" layoutY="705.0" mnemonicParsing="false" prefHeight="33.0" prefWidth="117.0" style="-fx-background-color: #fff7e2;" text="Supprimer" textFill="#984646">
-         <font>
-            <Font name="Sylfaen" size="16.0" />
-         </font></Button>
-      <Button fx:id="modifier" layoutX="1087.0" layoutY="705.0" mnemonicParsing="false" prefHeight="33.0" prefWidth="117.0" style="-fx-background-color: #fff7e2;" text="Modifier" textFill="#887940">
-         <font>
-            <Font name="Sylfaen" size="16.0" />
-         </font></Button>
-      <Button fx:id="ajouter" layoutX="1295.0" layoutY="705.0" mnemonicParsing="false" prefHeight="33.0" prefWidth="117.0" style="-fx-background-color: #fff7e2;" text="Ajouter" textFill="#3f7342">
-         <font>
-            <Font name="Sylfaen" size="16.0" />
-         </font></Button>
-      <DatePicker fx:id="datePickerDate" layoutX="877.0" layoutY="343.0" prefHeight="25.0" prefWidth="534.0" style="-fx-background-color: #fff7e2;" />
-      <ComboBox fx:id="animation" layoutX="876.0" layoutY="117.0" prefHeight="25.0" prefWidth="534.0" />
-      <ComboBox fx:id="ajouterAnimateur" layoutX="876.0" layoutY="181.0" prefHeight="25.0" prefWidth="398.0" />
-      <Button fx:id="ajouterAnimateurs" layoutX="1295.0" layoutY="181.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="117.0" style="-fx-background-color: white;" text="Ajouter" textFill="#73523f" />
-      <TextField fx:id="textFieldAnimateursPresents" layoutX="876.0" layoutY="247.0" prefHeight="25.0" prefWidth="534.0" style="-fx-background-color: white;" />
-      <Label layoutX="876.0" layoutY="222.0" prefHeight="25.0" prefWidth="156.0" text="Animateurs présents" textFill="#fff7e2">
+      <Button fx:id="supprimer" layoutX="878.0" layoutY="705.0" mnemonicParsing="false" prefHeight="33.0" prefWidth="117.0" onAction="#supprimerCreneau" style="-fx-background-color: #fff7e2;" text="Supprimer" textFill="#984646">
          <font>
             <Font name="Sylfaen" size="16.0" />
          </font>
-      </Label>
+      </Button>
+      <Button fx:id="modifier" layoutX="1087.0" layoutY="705.0" mnemonicParsing="false" prefHeight="33.0" prefWidth="117.0" onAction="#modifierCreneau" style="-fx-background-color: #fff7e2;" text="Modifier" textFill="#887940">
+         <font>
+            <Font name="Sylfaen" size="16.0" />
+         </font>
+      </Button>
+      <Button fx:id="ajouter" layoutX="1295.0" layoutY="705.0" mnemonicParsing="false" prefHeight="33.0" prefWidth="117.0" onAction="#ajouterCreneau" style="-fx-background-color: #fff7e2;" text="Ajouter" textFill="#3f7342">
+         <font>
+            <Font name="Sylfaen" size="16.0" />
+         </font>
+      </Button>
+      <DatePicker fx:id="datePickerDate" layoutX="877.0" layoutY="343.0" prefHeight="25.0" prefWidth="534.0" style="-fx-background-color: #fff7e2;" />
+      <ComboBox fx:id="animation" layoutX="876.0" layoutY="117.0" prefHeight="25.0" prefWidth="534.0" />
+      <ComboBox fx:id="ajouterAnimateur" layoutX="876.0" layoutY="181.0" prefHeight="25.0" prefWidth="398.0" />
       <Label layoutX="875.0" layoutY="488.0" prefHeight="25.0" prefWidth="198.0" text="Nombre de places" textFill="#fff7e2">
          <font>
             <Font name="Sylfaen" size="16.0" />

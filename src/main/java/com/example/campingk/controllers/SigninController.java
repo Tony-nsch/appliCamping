@@ -11,6 +11,7 @@ import com.example.campingk.App;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.input.MouseEvent;
+import org.w3c.dom.Text;
 
 import java.io.IOException;
 
@@ -23,18 +24,41 @@ public class SigninController {
     Button retour;
 
     @FXML
-    TextField login;
+    TextField emailUtilisateur;
 
     @FXML
-    PasswordField mdp;
+    PasswordField mdpUtilisateur;
 
     @FXML
     PasswordField confMdp;
 
+    @FXML
+    TextField nomUtilisateur;
+    @FXML
+    TextField prenomUtilisateur;
+    @FXML
+    TextField paysUtilisateur;
+    @FXML
+    TextField villeUtilisateur;
+    @FXML
+    TextField nomRueUtilisateur;
+    @FXML
+    TextField numRueUtilisateur;
+    @FXML
+    private ComboBox<String> role;
+
+    @FXML
+    public void initialize() {
+        role.getItems().addAll("Admin", "Utilisateur", "Invité");
+    }
+
+
+
+
     public void seConnecter(MouseEvent mouseEvent) throws IOException {
 
         try {
-            String mdpText = mdp.getText();
+            String mdpText = mdpUtilisateur.getText();
             String[] mdpSplit = mdpText.split("");
 
             boolean nbCarac = false;
@@ -54,17 +78,34 @@ public class SigninController {
             }
 
 
-            if(mdp.getText().equals(confMdp.getText()) && !login.getText().isEmpty() && nbCarac && min && maj && chiffre && caracSpe) {
+            if(mdpUtilisateur.getText().equals(confMdp.getText()) && !emailUtilisateur.getText().isEmpty() && nbCarac && min && maj && chiffre && caracSpe) {
 
                 Connection conn = ConnexionBDD.initialiserConnexion();
 
                 if (conn != null) {
+                    System.out.println("Email: " + emailUtilisateur.getText());
+                    System.out.println("Mot de passe: " + mdpUtilisateur.getText());
+                    System.out.println("Nom: " + nomUtilisateur.getText());
+                    System.out.println("Prenom: " + prenomUtilisateur.getText());
+                    System.out.println("Pays: " + paysUtilisateur.getText());
+                    System.out.println("Ville: " + villeUtilisateur.getText());
+                    System.out.println("Rue: " + nomRueUtilisateur.getText());
+                    System.out.println("Numéro de rue: " + numRueUtilisateur.getText());
+                    System.out.println("Rôle: " + role.getValue());
+
                     try {
                         // Préparer la requête d'insertion
-                        String sql = "INSERT INTO connection (idConnection, login, mdp) VALUES (NULL, ?, ?)";
+                        String sql = "INSERT INTO utilisateur (emailUtilisateur, mdpUtilisateur, nomUtilisateur, prenomUtilisateur, paysUtilisateur, villeUtilisateur, nomRueUtilisateur, numRueUtilisateur, role) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)";
                         PreparedStatement statement = conn.prepareStatement(sql);
-                        statement.setString(1, login.getText());
-                        statement.setString(2, mdp.getText());
+                        statement.setString(1, emailUtilisateur.getText());
+                        statement.setString(2, mdpUtilisateur.getText());
+                        statement.setString(3, nomUtilisateur.getText());
+                        statement.setString(4, prenomUtilisateur.getText());
+                        statement.setString(5, paysUtilisateur.getText());
+                        statement.setString(6, villeUtilisateur.getText());
+                        statement.setString(7, nomRueUtilisateur.getText());
+                        statement.setString(8, numRueUtilisateur.getText());
+                        statement.setString(9, role.getValue());
 
                         // Exécuter la requête
                         int rowsInserted = statement.executeUpdate();
@@ -76,7 +117,7 @@ public class SigninController {
                         // Gérer les erreurs SQL
                         Alert alert = new Alert(Alert.AlertType.ERROR);
                         alert.setTitle("Erreur SQL");
-                        alert.setContentText("Impossible de créer le compte : " + ex.getMessage());
+                        alert.setContentText("Impossible de créer le compte 0 : " + ex.getMessage());
                         alert.showAndWait();
                     } finally {
                         try {
@@ -86,28 +127,28 @@ public class SigninController {
                         }
                     }
                 } else {
-                    login.setText("");
-                    mdp.setText("");
+                    emailUtilisateur.setText("");
+                    mdpUtilisateur.setText("");
                     confMdp.setText("");
                     Alert alert = new Alert(Alert.AlertType.ERROR);
                     alert.setTitle("Erreur");
-                    alert.setContentText("Impossible de créer le compte");
+                    alert.setContentText("Impossible de créer le compte 1");
                     alert.showAndWait();
                 }
             } else {
-                login.setText("");
-                mdp.setText("");
+                emailUtilisateur.setText("");
+                mdpUtilisateur.setText("");
                 confMdp.setText("");
                 Alert alert = new Alert(Alert.AlertType.ERROR);
                 alert.setTitle("Erreur");
-                alert.setContentText("Impossible de créer le compte");
+                alert.setContentText("Impossible de créer le compte 2");
                 alert.showAndWait();
             }
 
         } catch (Exception ex) {
             Alert alert = new Alert(Alert.AlertType.ERROR);
             alert.setTitle("Erreur");
-            alert.setContentText("Impossible de créer le compte");
+            alert.setContentText("MDP incorrect");
             alert.showAndWait();
         }
     }

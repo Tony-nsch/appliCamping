@@ -25,19 +25,19 @@ public class LoginController {
     Button creerCompte;
 
     @FXML
-    TextField login;
+    TextField emailUtilisateur;
 
     @FXML
-    PasswordField mdp;
+    PasswordField mdpUtilisateur;
 
     public void allerPagePlaning(MouseEvent mouseEvent) throws IOException {
         Connection conn = ConnexionBDD.initialiserConnexion();
         if (conn != null) {
             try {
-                String sql = "SELECT login, mdp FROM connection WHERE login = ? AND mdp = ?";
+                String sql = "SELECT emailUtilisateur, mdpUtilisateur FROM utilisateur WHERE emailUtilisateur = ? AND mdpUtilisateur = ?";
                 PreparedStatement statement = conn.prepareStatement(sql);
-                statement.setString(1, login.getText());
-                statement.setString(2, mdp.getText());
+                statement.setString(1, emailUtilisateur.getText());
+                statement.setString(2, mdpUtilisateur.getText());
 
                 ResultSet resultSet = statement.executeQuery();
 
@@ -45,11 +45,11 @@ public class LoginController {
                     FXMLLoader page = new FXMLLoader(App.class.getResource("planing.fxml"));
                     App.lancerPage(page, connecter);
                 } else {
-                    login.setText("");
-                    mdp.setText("");
+                    emailUtilisateur.setText("");
+                    mdpUtilisateur.setText("");
                     Alert alert = new Alert(Alert.AlertType.ERROR);
                     alert.setTitle("Erreur Insertion");
-                    alert.setContentText("Login ou mot de passe incorrect");
+                    alert.setContentText("email ou mot de passe incorrect");
                     alert.showAndWait();
                 }
             } catch (SQLException ex) {

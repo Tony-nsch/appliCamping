@@ -42,15 +42,15 @@
                 <Font name="Sylfaen" size="16.0" />
             </font>
         </Label>
-        <Button fx:id="supprimer" layoutX="878.0" layoutY="705.0" mnemonicParsing="false" prefHeight="33.0" prefWidth="117.0" style="-fx-background-color: #fff7e2;" text="Supprimer" textFill="#984646">
+        <Button fx:id="supprimer" layoutX="878.0" layoutY="705.0" mnemonicParsing="false" prefHeight="33.0" prefWidth="117.0" onAction="#supprimerAnimation" style="-fx-background-color: #fff7e2;" text="Supprimer" textFill="#984646">
             <font>
                 <Font name="Sylfaen" size="16.0" />
             </font></Button>
-        <Button fx:id="modifier" layoutX="1087.0" layoutY="705.0" mnemonicParsing="false" prefHeight="33.0" prefWidth="117.0" style="-fx-background-color: #fff7e2;" text="Modifier" textFill="#887940">
+        <Button fx:id="modifier" layoutX="1087.0" layoutY="705.0" mnemonicParsing="false" prefHeight="33.0" prefWidth="117.0" onAction="#modifierAnimation" style="-fx-background-color: #fff7e2;" text="Modifier" textFill="#887940">
             <font>
                 <Font name="Sylfaen" size="16.0" />
             </font></Button>
-        <Button fx:id="ajouter" layoutX="1295.0" layoutY="705.0" mnemonicParsing="false" prefHeight="33.0" prefWidth="117.0" style="-fx-background-color: #fff7e2;" text="Ajouter" textFill="#3f7342">
+        <Button fx:id="ajouter" layoutX="1295.0" layoutY="705.0" mnemonicParsing="false" prefHeight="33.0" prefWidth="117.0" onAction="#ajouterAnimation" style="-fx-background-color: #fff7e2;" text="Ajouter" textFill="#3f7342">
             <font>
                 <Font name="Sylfaen" size="16.0" />
             </font></Button>
