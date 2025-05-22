@@ -2,6 +2,7 @@ package com.example.campingk.controllers;
 
 import com.example.campingk.App;
 import com.example.campingk.ConnexionBDD;
+import com.example.campingk.util.PasswordUtils;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.control.Alert;
@@ -34,16 +35,25 @@ public class LoginController {
         Connection conn = ConnexionBDD.initialiserConnexion();
         if (conn != null) {
             try {
-                String sql = "SELECT emailUtilisateur, mdpUtilisateur FROM utilisateur WHERE emailUtilisateur = ? AND mdpUtilisateur = ?";
+                String sql = "SELECT emailUtilisateur, mdpUtilisateur FROM utilisateur WHERE emailUtilisateur = ?";
                 PreparedStatement statement = conn.prepareStatement(sql);
                 statement.setString(1, emailUtilisateur.getText());
-                statement.setString(2, mdpUtilisateur.getText());
 
                 ResultSet resultSet = statement.executeQuery();
 
                 if (resultSet.next()) {
-                    FXMLLoader page = new FXMLLoader(App.class.getResource("planing.fxml"));
-                    App.lancerPage(page, connecter);
+                    String hashedPassword = resultSet.getString("mdpUtilisateur");
+                    if (PasswordUtils.checkPassword(mdpUtilisateur.getText(), hashedPassword)) {
+                        FXMLLoader page = new FXMLLoader(App.class.getResource("planing.fxml"));
+                        App.lancerPage(page, connecter);
+                    } else {
+                        emailUtilisateur.setText("");
+                        mdpUtilisateur.setText("");
+                        Alert alert = new Alert(Alert.AlertType.ERROR);
+                        alert.setTitle("Erreur Insertion");
+                        alert.setContentText("email ou mot de passe incorrect");
+                        alert.showAndWait();
+                    }
                 } else {
                     emailUtilisateur.setText("");
                     mdpUtilisateur.setText("");
@@ -66,6 +76,7 @@ public class LoginController {
             }
         }
     }
+
 
 
     public void allerPageSignin(MouseEvent mouseEvent) {

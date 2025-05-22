@@ -1,6 +1,7 @@
 package com.example.campingk.controllers;
 
 import com.example.campingk.ConnexionBDD;
+import com.example.campingk.util.PasswordUtils;
 import javafx.scene.control.*;
 
 import java.sql.Connection;
@@ -56,7 +57,6 @@ public class SigninController {
 
 
     public void seConnecter(MouseEvent mouseEvent) throws IOException {
-
         try {
             String mdpText = mdpUtilisateur.getText();
             String[] mdpSplit = mdpText.split("");
@@ -77,7 +77,6 @@ public class SigninController {
                 if (!Character.isLetterOrDigit(c)) caracSpe = true;
             }
 
-
             if(mdpUtilisateur.getText().equals(confMdp.getText()) && !emailUtilisateur.getText().isEmpty() && nbCarac && min && maj && chiffre && caracSpe) {
 
                 Connection conn = ConnexionBDD.initialiserConnexion();
@@ -94,11 +93,14 @@ public class SigninController {
                     System.out.println("Rôle: " + role.getValue());
 
                     try {
+                        // Hacher le mot de passe
+                        String hashedPassword = PasswordUtils.hashPassword(mdpUtilisateur.getText());
+
                         // Préparer la requête d'insertion
                         String sql = "INSERT INTO utilisateur (emailUtilisateur, mdpUtilisateur, nomUtilisateur, prenomUtilisateur, paysUtilisateur, villeUtilisateur, nomRueUtilisateur, numRueUtilisateur, role) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)";
                         PreparedStatement statement = conn.prepareStatement(sql);
                         statement.setString(1, emailUtilisateur.getText());
-                        statement.setString(2, mdpUtilisateur.getText());
+                        statement.setString(2, hashedPassword); // Stocker le mot de passe haché
                         statement.setString(3, nomUtilisateur.getText());
                         statement.setString(4, prenomUtilisateur.getText());
                         statement.setString(5, paysUtilisateur.getText());
@@ -152,6 +154,7 @@ public class SigninController {
             alert.showAndWait();
         }
     }
+
 
     public void allerPageLogin(MouseEvent mouseEvent) throws IOException {
         FXMLLoader page = new FXMLLoader(App.class.getResource("login.fxml"));
